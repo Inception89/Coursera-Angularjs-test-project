@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myFirstApp">
+<html ng-app='RoutingApp'>
 
 <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-        src="C:\Users\patp7\OneDrive\Documents\CodingProjects\Angular Project\Coursera-Angularjs-test-project\Coursera-Angularjs-test-project\angular.min.js"></script>
-    <script src="app.js"></script>
+
+
 
     <title>Document</title>
 </head>
 
-<body ng-controller="MyFirstController">
-    <h1>Coursera project
-    </h1>
-    <p>{{name}}</p>
+<body>
+    <header ng-include="'navigation.html'"></header>
+    
+    
+        <h1>Home page</h1>
+        
+        <div class="tab1">
+            <a ui-sref="tab1">Go to page 1</a>
+        </div>
+        <div class="tab2">
+            <a ui-sref="tab2">Go to page 2</a>
+        </div>
+        <ui-view> </ui-view>
+    
+   
+    <script src="app/Lib/angular.min.js"></script>
+    <script src="app/Lib/angular-ui-router.min.js"></script>
+    <script src="app/app.js"></script>
+
 </body>
 
 </html>
